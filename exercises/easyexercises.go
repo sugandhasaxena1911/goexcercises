@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// DivNum divides numbers
+// DivNum tells numbers divided by 7 and not by 5
 func DivNum(lower_l int, upper_l int) string {
 	var str []string
 	for x := lower_l; x <= upper_l; x++ {
