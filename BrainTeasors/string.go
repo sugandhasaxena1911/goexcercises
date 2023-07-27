@@ -24,19 +24,19 @@ func main() {
 	sum := 0
 	for i, v := range a {
 		// i index of byte , v = value of rune to represent char : UNICODE , a[i]= value of byte at pos i
-		fmt.Println("Char : ", string(v))
-		fmt.Printf("TYPE Index: %T\n", i)
-		fmt.Println("Index: ", i)
-		fmt.Printf("TYPE Rune: %T\n", v)
+		fmt.Println("Index: Value ", i, v)
+		fmt.Printf("Types i, v %T %T \n: ", i, v)
 		fmt.Println("Unicode or rune: ", v)
-		fmt.Printf("TYPE a[i] : %T\n", a[i])
+		fmt.Println("character ", string(v))
 		fmt.Println("a[i]: first byte of rune OR BYTe at pos i: ", a[i])
-		fmt.Println("\n-----------------------------------------------------------------")
+		fmt.Printf("TYPE a[i] : %T\n\n\n", a[i])
 
 		sum++
 
 	}
-	fmt.Println("Actual no of characters = Runes count in string = utf8.RuneCountInString  ", sum, utf8.RuneCountInString(a))
+	fmt.Println("\n-----------------------------------------------------------------")
+
+	fmt.Println("Actual no of characters = Runes count in string = utf8.RuneCountInString  ", sum, utf8.RuneCountInString(a), utf8.RuneCount([]byte(a)))
 
 	//String si nothing but slice of bytes
 	p := []byte(a)
